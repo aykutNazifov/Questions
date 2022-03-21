@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Gideon Roman', sans-serif;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.question {
+    border: 1px solid #9fa4a8;
+    background: transparent;
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 20px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+}
+
+.question.active {
+    background-color: #fff;
+    box-shadow: 0px 2px 3px black;
+    min-height: 200px;
+}
+
+.question h3{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.question p{
+    display: none;
+}
+
+.question.active p{
+    display: block;
+}
+
+i{
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+}
+
+.question.active::after{
+    content: " ";
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
